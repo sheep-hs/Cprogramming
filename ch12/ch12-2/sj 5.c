@@ -11,6 +11,7 @@ int main(void)
 	int* ptr1 = &num1;
 	int* ptr2 = &num2;
 	int* temp;
+	
 	(*ptr1) += 30;
 	(*ptr2) -= 20;
 
