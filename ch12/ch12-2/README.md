@@ -17,14 +17,14 @@ double db = 3.4;
 ## 문제에 주어진 코드
 ```
 #include<stdio.h>
-intmain(void)
+int main(void)
 {
    int a = -100;
    char b = ‘A’;
    double c = 3.14;
-   printf(“int형변수a의값은:%d\n”, a);
-   printf(“char형변수b의값은:%c\n”, b)
-   printf(“double형변수c의값은:%lf\n”, c);
+   printf(“int형 변수 a의 값은:%d\n”, a);
+   printf(“char형 변수 b의 값은:%c\n”, b)
+   printf(“double형 변수 c의 값은:%lf\n”, c);
    return0;
 }
 ```
@@ -92,7 +92,7 @@ return 0;
 ## 문제에 주어진 코드
 ```
 #include<stdio.h>
-intmain(void)
+int main(void)
 {
    int* ptr= (int*)125; // ①
    *ptr= 10;
@@ -105,12 +105,13 @@ intmain(void)
 ## 문제에 주어진 코드
 ```
 #include<stdio.h>
-intmain(void)
+int main(void)
 {
    int a = 100, b=200;
    int sum;
-   sum = a+b; //포인터를이용하여수정
-   printf(“두정수의합: %d\n”, sum); //포인터를이용하여수정
+
+   sum = a + b; //포인터를이용하여수정
+   printf(“두정수의 합: %d\n”, sum); //포인터를이용하여수정
    return0;
 }
 ```
