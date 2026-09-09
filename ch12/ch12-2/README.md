@@ -41,43 +41,43 @@ int main(void)
 ```
 - 
 ```
-	int a = -100;
+int a = -100;
 ```
 - 
 ```
-	char b = 'A';
+char b = 'A';
 ```
 - 
 ```
-	double c = 3.14;
+double c = 3.14;
 ```
 - 
 ```
-	int* pta = &a;
+int* pta = &a;
 ```
 -
 ```
-	char* ptb = &b;
+char* ptb = &b;
 ```
 - 
 ```
-	double* ptc = &c;
+double* ptc = &c;
 ```
 - 
 ```
-	printf("int형 변수 a의 값은: %d\n", *pta);
+printf("int형 변수 a의 값은: %d\n", *pta);
 ```
 - 
 ```
-	printf("char형 변수 b의 값은: %c\n", *ptb);
+printf("char형 변수 b의 값은: %c\n", *ptb);
 ```
 - 
 ```
-	printf("double형 변수 c의 값은: %lf\n", *ptc);
+printf("double형 변수 c의 값은: %lf\n", *ptc);
 ```
 - 
 ```
-	return 0;
+return 0;
 ```
 - 
 -----------------------------------
@@ -113,9 +113,49 @@ return0;
 }
 ```
 ## 실행결과
+<img width="390" height="101" alt="12-2-4" src="https://github.com/user-attachments/assets/d871bfb4-60d7-4592-9289-e846235a7455" />
 
 ## 추가 또는 수정된 코드 설명
-
+```
+#include<stdio.h>
+```
+- 
+```
+int main(void)
+```
+- 
+```
+int a = 100, b = 200;
+```
+- 
+```
+int sum;
+```
+- 
+```
+int* pta = &a;
+```
+- 
+```
+int* ptb = &b;
+```
+- 
+```
+int* ptsum = &sum;
+```
+- 
+```
+*ptsum = *pta + *ptb;
+```
+- 
+```
+printf("두 정수의 합: %d\n", *ptsum);
+```
+- 
+```
+return 0;
+```
+- 
 --------------------------------------
 # 실습과제 5
 ## 문제
