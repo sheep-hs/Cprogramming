@@ -29,6 +29,7 @@ return0;
 }
 ```
 ## 실행 결과
+<img width="396" height="132" alt="12-2-2" src="https://github.com/user-attachments/assets/9d944485-a172-4e0a-9679-d0e6c00af4c0" />
 
 ## 수정된 코드 설명
 
