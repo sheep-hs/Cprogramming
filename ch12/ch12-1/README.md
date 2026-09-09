@@ -95,5 +95,5 @@ printf("double형 변수 c의 주소: %u", &c);
 return 0;
 ```
 - 0을 반환하고 메인함수 종료
-# 실행결과
+## 실행결과
 <img width="427" height="130" alt="12-1-4" src="https://github.com/user-attachments/assets/d61e1d7d-cf56-43ff-9d8e-6118f81bc578" />
