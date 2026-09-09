@@ -167,5 +167,61 @@ return 0;
 int형 변수 num1과 num2를 선언과 동시에 각각 20과 30으로 초기화 하고 포인터 변수 ptr1과 ptr2를 선언하여 각각 num1과 num2를 가리키게 하자. 그리고 이 상태에서 포인터 변수 ptr1과 ptr2를 이용해서 num1의 값을 30 증가시키고 num2의 값을 20 감소시키자. 이제 두 포인터 변수가 가리키는 대상을 서로 바꾸고 ptr1과 ptr2가 가리키는 변수에 저장된 값을 각각 출력하자.  
 
 ## 작성한 코드 설명
-
+```
+#include<stdio.h>
+```
+- 
+```
+int main(void)
+```
+- 
+```
+int num1 = 20, num2 = 30;
+```
+- 
+```
+int* ptr1 = &num1;
+```
+- 
+```
+int* ptr2 = &num2;
+```
+- 
+```
+int* temp;
+```
+- 
+```
+(*ptr1) += 30;
+```
+- 
+```
+(*ptr2) -= 20;
+```
+- 
+```
+temp = ptr1;
+```
+- 
+```
+ptr1 = ptr2;
+```
+- 
+```
+ptr2 = temp;
+```
+- 
+```
+printf("ptr1이 가리키는 값: %d", *ptr1);
+```
+- 
+```
+printf("ptr2이 가리키는 값: %d", *ptr2);
+```
+- 
+```
+return 0;
+```
+- 
 ## 실행결과
+<img width="385" height="100" alt="12-2-5" src="https://github.com/user-attachments/assets/87b39e5e-f3c8-4bf9-b776-7cb749867550" />
