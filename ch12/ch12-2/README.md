@@ -35,51 +35,51 @@ int main(void)
 ```
 #include<stdio.h>
 ```
-- 
+- 헤더파일 stdio.h를 포함해라
 ```
 int main(void)
 ```
-- 
+- 메인함수 시작
 ```
 int a = -100;
 ```
-- 
+- int형 변수 a를 선언하고 -100을 저장
 ```
 char b = 'A';
 ```
-- 
+- char형 변수 b를 선언하고 A를 저장
 ```
 double c = 3.14;
 ```
-- 
+- double형 변수 c를 선언하고 3.14를 저장
 ```
 int* pta = &a;
 ```
--
+-포인터 변수 pta를 선언하고 변수 a의 주소값을 저장
 ```
 char* ptb = &b;
 ```
-- 
+- 포인터 변수 ptb를 선언하고 변수 b의 주소값을 저장
 ```
 double* ptc = &c;
 ```
-- 
+- 포인터 변수 ptc를 선언하고 변수 c의 주소값 저장
 ```
 printf("int형 변수 a의 값은: %d\n", *pta);
 ```
-- 
+- 화면에 int형 변수 a의 값을 출력해라
 ```
 printf("char형 변수 b의 값은: %c\n", *ptb);
 ```
-- 
+- 화면에 char형 변수 b의 값을 출력해라
 ```
 printf("double형 변수 c의 값은: %lf\n", *ptc);
 ```
-- 
+- 화면에 double형 변수 c의 값을 출력해라
 ```
 return 0;
 ```
-- 
+- 0을 반환하고 메인함수 종료
 -----------------------------------
 # 실습과제 3
 1. ①번 라인에서 강제형변환이 사용된 이유를 설명하라.
@@ -122,43 +122,47 @@ int main(void)
 ```
 #include<stdio.h>
 ```
-- 
+- 헤더파일 stdio.h를 포함해라
 ```
 int main(void)
 ```
-- 
+- 메인함수 시작
 ```
 int a = 100, b = 200;
 ```
-- 
+- int형 변수 a와 b를 선언하고 각각 100, 200을 저장
 ```
 int sum;
 ```
-- 
+- int형 변수 sum 선언
 ```
 int* pta = &a;
 ```
-- 
+- 포인터 변수 pta를 선언하고 변수 a의 주소값을 저장
 ```
 int* ptb = &b;
 ```
-- 
+- 포인터 변수 ptb를 선언하고 변수 b의 주소값을 저장
 ```
 int* ptsum = &sum;
 ```
-- 
+- 포인터 변수 ptsum을 선언하고 변수 sum의 주소값을 저장
 ```
 *ptsum = *pta + *ptb;
 ```
-- 
+- pta와 ptb가 가리키는 변수의 값을 더하여 ptsum이 가리키는 변수에 저장
+  
+  -> a와 b의 값을 더한 결과를 sum에 저장
 ```
 printf("두 정수의 합: %d\n", *ptsum);
 ```
-- 
+- ptsum이 가리키는 변수 출력
+
+  ->a와 b의 합인 sum 출력
 ```
 return 0;
 ```
-- 
+- 0을 반환하고 메인함수 종료
 --------------------------------------
 # 실습과제 5
 ## 문제
@@ -170,58 +174,58 @@ int형 변수 num1과 num2를 선언과 동시에 각각 20과 30으로 초기�
 ```
 #include<stdio.h>
 ```
-- 
+- 헤더파일 stdio.h를 포함해라
 ```
 int main(void)
 ```
-- 
+- 메인함수 시작
 ```
 int num1 = 20, num2 = 30;
 ```
-- 
+- int형 변수 num1과 num2를 선언하고 각각 20, 30을저장
 ```
 int* ptr1 = &num1;
 ```
-- 
+- 포인터 변수 ptr1를 선언하고 변수 num1의 주소값을 저장
 ```
 int* ptr2 = &num2;
 ```
-- 
+- 포인터 변수 ptr2를 선언하고 변수 num2의 주소값을 저장
 ```
 int* temp;
 ```
-- 
+- 포인터 변수 temp 선언
 ```
 (*ptr1) += 30;
 ```
-- 
+- *ptr1 = *ptr + 30;
 ```
 (*ptr2) -= 20;
 ```
-- 
+- *ptr2 = *ptr2 - 20;
 ```
 temp = ptr1;
 ```
-- 
+- ptr1에 저장된 주소값을 temp에 저장
 ```
 ptr1 = ptr2;
 ```
-- 
+- ptr2에 저장된 주소값을 ptr1에 저장
 ```
 ptr2 = temp;
 ```
-- 
+- temp에 저장해 두었던 원래의 ptr1의 주소값을 ptr2에 저장
 ```
 printf("ptr1이 가리키는 값: %d", *ptr1);
 ```
-- 
+- ptr1이 가리키는 값 출력
 ```
 printf("ptr2이 가리키는 값: %d", *ptr2);
 ```
-- 
+- ptr2가 가리키는 값 출력
 ```
 return 0;
 ```
-- 
+- 0을 반환하고 메인함수 종료
 ## 실행결과
 <img width="385" height="100" alt="12-2-5" src="https://github.com/user-attachments/assets/87b39e5e-f3c8-4bf9-b776-7cb749867550" />
