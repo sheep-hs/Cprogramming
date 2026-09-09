@@ -19,13 +19,13 @@ double db = 3.4;
 #include<stdio.h>
 intmain(void)
 {
-inta = -100;
-charb = ‘A’;
-doublec = 3.14;
-printf(“int형변수a의값은:%d\n”, a);
-printf(“char형변수b의값은:%c\n”, b)
-printf(“double형변수c의값은:%lf\n”, c);
-return0;
+   int a = -100;
+   char b = ‘A’;
+   double c = 3.14;
+   printf(“int형변수a의값은:%d\n”, a);
+   printf(“char형변수b의값은:%c\n”, b)
+   printf(“double형변수c의값은:%lf\n”, c);
+   return0;
 }
 ```
 ## 실행 결과
@@ -83,19 +83,21 @@ return 0;
 -----------------------------------
 # 실습과제 3
 1. ①번 라인에서 강제형변환이 사용된 이유를 설명하라.
-   -> 
-2. 아래 코드를 실핼하면 오류가 발생하여 중단된다. 이유를 자세히 설명하라.
-   -> 
+
+   -> `125`는 정수값으로 자료형이 `int`인데 `ptr`은 `int*`형 포인터 변수이므로 정수값인 `125`를 주소로 사용하기 위해서 `(int*)`를 사용하여 `int*`형 주소로 강제형변환을 한 것이다.
+2. 아래 코드를 실행하면 오류가 발생하여 중단된다. 이유를 자세히 설명하라.
+
+   -> `ptr`에는 임의로 저장된 `125`가 있는데 해당 주소는 할당받지 않은 유효하지 않은 메모리 주소이다. 그래서 `*ptr`을 이용하여 `125`번지에 메모리 값 `10`을 저장하려 하면 유효하지 않은 메모리 영역에 접근하기 때문에 오류가 발생하여 중단되는 것이다.
 
 ## 문제에 주어진 코드
 ```
 #include<stdio.h>
 intmain(void)
 {
-int* ptr= (int*)125; // ①
-*ptr= 10;
-printf("%d\n", *ptr);
-return0;
+   int* ptr= (int*)125; // ①
+   *ptr= 10;
+   printf("%d\n", *ptr);
+   return0;
 }
 ```
 ------------------------------------
@@ -105,11 +107,11 @@ return0;
 #include<stdio.h>
 intmain(void)
 {
-inta = 100, b=200;
-intsum;
-sum=a+b; //포인터를이용하여수정
-printf(“두정수의합: %d\n”, sum); //포인터를이용하여수정
-return0;
+   int a = 100, b=200;
+   int sum;
+   sum = a+b; //포인터를이용하여수정
+   printf(“두정수의합: %d\n”, sum); //포인터를이용하여수정
+   return0;
 }
 ```
 ## 실행결과
