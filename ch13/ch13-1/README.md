@@ -50,69 +50,71 @@ int main(void)
 }
 ```
 ## 실행결과
+<img width="401" height="92" alt="13-1-3" src="https://github.com/user-attachments/assets/4233658d-4eda-4ea1-b158-8d55d2468f07" />
 
 ## 변경한 코드 설명
 ```
 #define _CRT_SECURE_NO_WARNINGS
 ```
--
+- 
 ```
 #pragma warning(disable:6031)
 ```
--
+- 
 ```
 #include<stdio.h>
 ```
--
+- 
 ```
 int main(void)
 ```
--
+- 
 ```
 int grade[5];
 ```
--
+- 
 ```
 int sum = 0, i, average;
 ```
--
+- 
 ```
 for (i = 0; i < 5; i++)
 ```
--
+- 
 ```
 printf("성적을 입력하시오: ");
 ```
--
+- 
 ```
 scanf("%d", (grade + i));
 ```
--
+- 
 ```
 for (i = 0; i < 5; i++)
 ```
--
+- 
 ```
 sum += *(grade + i);
 ```
--
+- 
 ```
 average = sum / 5.0;
 ```
--
+- 
 ```
 printf("성적 평균= %d\n", average);
 ```
--
+- 
 ```
 return 0;
 ```
--
+- 
 
 -------------------------------
 # 실습과제 3
 ## 증감연산자 a++, ++a의 차이를 설명하시오.
-   ->
+   - a++(후위 증감연산자): 현재 값을 먼저 사용한 후 값을 1만큼 증가시킨다.
+   - ++a(전위 증감연산자): 값을 먼저 1만큼 증가시킨 후 증가된 값을 사용한다.
 ## 문제에 주어진 코드
 ```
 #include<stdio.h>
@@ -126,11 +128,43 @@ return 0;
 }
 ```
 ## 실행결과
+<img width="401" height="92" alt="13-1-3" src="https://github.com/user-attachments/assets/89a88741-529e-4c9c-abf6-11ba56fd37b8" />
 
 ## 코드의 문제점
-
+배열 이름은 주소를 나타내지만 그 자체를 변경할 수 없으므로 `a++`와 값은 포인터 연산을 수행할 수 없다. 따라서 포인터 변수를 선언하여 배열의 주소를 저장한 후 포인터 연산을 해야한다.
 ## 문제 해결한 코드 설명
-
+```
+#include<stdio.h>
+```
+- 
+```
+int main(void)
+```
+- 
+```
+int a[] = { 10, 20, 30 }, i, sum = 0;
+```
+- 
+```
+int* p = a;
+```
+- 
+```
+for (i = 0; i < 3; i++)
+```
+- 
+```
+sum += *p++;
+```
+- 
+```
+printf("sum: %d\n", sum);
+```
+- 
+```
+return 0;
+```
+- 
 
 ---------------------------
 # 실습과제 4
