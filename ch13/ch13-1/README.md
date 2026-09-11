@@ -4,8 +4,9 @@
   -> 배열 첫번째 요소의 주소이다.
   
 2. 배열표현과 포인터(주소) 표현의 변환 공식을 설명하라.
+   
   | 구분 | 배열표현 | 포인터(주소) 표현 |
-  | :--- | :--- | :--- |
+  | :---: | :---: | :---: |
   | 배열요소의 값 | `a[i]` | `*(a+i)` |
   | 배열요소의 주소 | `&a[i]` | `a+i` |
   
@@ -247,5 +248,52 @@ return 0;
 --------------------------
 # 실습과제 5
 ## 작성한 코드 설명
+```
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
+#include <stdio.h>
+int main(void)
+{
+    double arr[5];
+    double* ptr = arr;
+    double* temp;
+    int i;
 
+    printf("5개의 실수를 입력하시오.\n");
+    for (i = 0; i < 5; i++)
+        scanf("%lf", ptr + i);
+
+    for (i = 0; i < 5; i++)
+        *(ptr + i) += 2;
+
+    printf("배열 표현: ");
+    for (i = 0; i < 5; i++)
+        printf("%.2f ", arr[i]);
+    printf("\n");
+
+    printf("배열명을 이용한 포인터 표현: ");
+    for (i = 0; i < 5; i++)
+        printf("%.2f ", *(arr + i));
+    printf("\n");
+
+    printf("포인터 변수를 이용한 배열 표현: ");
+    for (i = 0; i < 5; i++)
+        printf("%.2f ", ptr[i]);
+    printf("\n");
+
+    printf("포인터 변수를 이용한 포인터 표현: ");
+    for (i = 0; i < 5; i++)
+        printf("%.2f ", *(ptr + i));
+    printf("\n");
+    temp = ptr;
+
+    printf("포인터 증감 연산을 이용한 표현: ");
+    for (i = 0; i < 5; i++)
+        printf("%.2f ", *(temp++));
+    printf("\n");
+
+    return 0;
+}
+```
 ## 실행결과
+<img width="750" height="227" alt="13-1-5" src="https://github.com/user-attachments/assets/512d4333-8b93-482f-9d16-6d5a817c405f" />
