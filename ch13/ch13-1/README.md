@@ -57,59 +57,55 @@ int main(void)
 ```
 #define _CRT_SECURE_NO_WARNINGS
 ```
-- 
+- 보안관련 경고 방지
 ```
 #pragma warning(disable:6031)
 ```
-- 
+- 리턴값관련 경고 방지
 ```
 #include<stdio.h>
 ```
-- 
+- 헤더파일 stdio.h를 포함해라
 ```
 int main(void)
 ```
-- 
+- 메인함수 시작
 ```
 int grade[5];
 ```
-- 
+- int형 배열 grade 선언(총 5개의 정수형 데이터를 저장할 수 있음)
 ```
 int sum = 0, i, average;
 ```
-- 
+- int형 변수 sum, i ,average 선언하고 sum에 0 저장
 ```
 for (i = 0; i < 5; i++)
+{
+  printf("성적을 입력하시오: ");
+  scanf("%d", (grade + i));
+}
 ```
-- 
-```
-printf("성적을 입력하시오: ");
-```
-- 
-```
-scanf("%d", (grade + i));
-```
-- 
+- `for (i = 0; i < 5; i++)`: 성적을 5번 입력받기 위한 반복문
+- `printf("성적을 입력하시오: ");`: "성적을 입력하시오: " 출력
+- `scanf("%d", (grade + i));`: `grade + i`가 가리키는 배열의 요소에 입력받은 정수를 저장
 ```
 for (i = 0; i < 5; i++)
+  sum += *(grade + i);
 ```
-- 
-```
-sum += *(grade + i);
-```
-- 
+- `for (i = 0; i < 5; i++)`: 배열에 저장된 5개의 성적을 차례대로 더하기 위한 반복문
+- `sum += *(grade + i);`: 배열의 각 원소를 간접참조하여 `sum`에 차례대로 더함
 ```
 average = sum / 5.0;
 ```
-- 
+- 성적의 합계 `sum`을 5로 나누어 평균 계산
 ```
 printf("성적 평균= %d\n", average);
 ```
-- 
+- 계산한 평균 출
 ```
 return 0;
 ```
-- 
+- 0을 반환하고 메인함수 종료
 
 -------------------------------
 # 실습과제 3
@@ -137,35 +133,33 @@ return 0;
 ```
 #include<stdio.h>
 ```
-- 
+- 헤더파일 stdio.h를 포함해라
 ```
 int main(void)
 ```
-- 
+- 메인함수 시작
 ```
 int a[] = { 10, 20, 30 }, i, sum = 0;
 ```
-- 
+- int형 a배열을 선언하고 10, 20, 30으로 초기화 / int형 변수 i, sum을 선언하고 sum에 0을 저장
 ```
 int* p = a;
 ```
-- 
+- 포인터 변수 p에 배열 a의 첫 번째 요소의 주소를 저장
 ```
 for (i = 0; i < 3; i++)
+  sum += *p++;
 ```
-- 
-```
-sum += *p++;
-```
-- 
+- 총 3번 반복
+- `sum += *p++;`: 현재 p가 가리키는 값을 먼저 사용한 후 p를 다음 요소를 가리키도록 증가시킴
 ```
 printf("sum: %d\n", sum);
 ```
-- 
+- sum에 저장된 합계 60을 화면에 출력
 ```
 return 0;
 ```
-- 
+- 0을 반환하고 메인함수 종료
 
 ---------------------------
 # 실습과제 4
@@ -173,75 +167,69 @@ return 0;
 ```
 #define _CRT_SECURE_NO_WARNINGS
 ```
--
+- 보안관련 경고 방지
 ```
 #pragma warning(disable:6031)
 ```
--
+- 리턴값관련 경고 방지
 ```
 #include<stdio.h>
 ```
--
+- 헤더파일 stdio.h를 포함해라
 ```
 int main(void)
 ```
--
+- 메인함수 시작
 ```
 double arr[5];
 ```
--
+- double형 배열 선언(총 5개의 정수형 데이터를 저장할 수 있음)
 ```
 double* ptr = arr;
 ```
--
+- double형 포인터 변수 선언하고 배열 arr의 첫 번째 요소의 주소 저장
 ```
 int i;
 ```
--
+- int형 변수 i 선언
 ```
 for (i = 0; i < 5; i++)
+{
+  printf("5개의 실수를 입력하시오: ");
+  scanf("%lf", ptr++);
+}
 ```
--
-```
-printf("5개의 실수를 입력하시오: ");
-```
--
-```
-scanf("%lf", ptr++);
-```
--
+- 총 5회 반복
+- `scanf("%lf", ptr++);`: 입력받은 실수를 ptr이 가리키는 배열 요소에 저장한 후 ptr을 다음 배열 요소의 주소로 이동시킴
 ```
 ptr = arr;
 ```
--
+- ptr이 배열의 첫 번째 요소를 다시 가리키오록 초기화
 ```
 for (i = 0; i < 5; i++)
+{
+  *ptr += 2;
+  ptr++;
+}
 ```
--
-```
-*ptr += 2;
-```
--
-```
-ptr++;
-```
--
+- 총 5회 반복
+- `*ptr += 2;`: ptr이 가리키는 배열 요소의 값에 2를 더함
+- `ptr++;`: ptr을 다음 배열 요소의 주소로 이동시킴
 ```
 for (i = 0; i < 5; i++)
+  printf("%.2f ", arr[i]);
 ```
--
-```
-printf("%.2f ", arr[i]);
-```
--
+- 총 5회 반복
+- `printf("%.2f ", arr[i]);`: 배열 arr의 각 요소를 소수점 둘째 자리까지 출력
 ```
 printf("\n");
 ```
--
+- 줄바꿈
 ```
 return 0;
 ```
--
+- 0을 반환하고 메인함수 종료
+
 ## 실행결과
 <img width="402" height="197" alt="13-1-4" src="https://github.com/user-attachments/assets/d9c71bd4-47f2-4341-987e-d74f46783f3a" />
 
@@ -250,50 +238,130 @@ return 0;
 ## 작성한 코드 설명
 ```
 #define _CRT_SECURE_NO_WARNINGS
-#pragma warning(disable:6031)
-#include <stdio.h>
-int main(void)
-{
-    double arr[5];
-    double* ptr = arr;
-    double* temp;
-    int i;
-
-    printf("5개의 실수를 입력하시오.\n");
-    for (i = 0; i < 5; i++)
-        scanf("%lf", ptr + i);
-
-    for (i = 0; i < 5; i++)
-        *(ptr + i) += 2;
-
-    printf("배열 표현: ");
-    for (i = 0; i < 5; i++)
-        printf("%.2f ", arr[i]);
-    printf("\n");
-
-    printf("배열명을 이용한 포인터 표현: ");
-    for (i = 0; i < 5; i++)
-        printf("%.2f ", *(arr + i));
-    printf("\n");
-
-    printf("포인터 변수를 이용한 배열 표현: ");
-    for (i = 0; i < 5; i++)
-        printf("%.2f ", ptr[i]);
-    printf("\n");
-
-    printf("포인터 변수를 이용한 포인터 표현: ");
-    for (i = 0; i < 5; i++)
-        printf("%.2f ", *(ptr + i));
-    printf("\n");
-    temp = ptr;
-
-    printf("포인터 증감 연산을 이용한 표현: ");
-    for (i = 0; i < 5; i++)
-        printf("%.2f ", *(temp++));
-    printf("\n");
-
-    return 0;
-}
 ```
+- 보안관련 경고 방지
+```
+#pragma warning(disable:6031)
+```
+- 리턴값관련 경고 방지
+```
+#include <stdio.h>
+```
+- 헤더파일 stdio.h를 포함해라
+```
+int main(void)
+``` 
+- 메인함수 시작
+```
+double arr[5];
+```
+- double형 배열 선언(총 5개의 정수형 데이터를 저장할 수 있음)
+```
+double* ptr = arr;
+```
+- double형 포인터 변수 선언하고 배열 arr의 첫 번째 요소의 주 저장
+```
+double* temp;
+```
+- double형 포인터 변수 temp 선언
+```
+int i;
+```
+- int형 변수 i 선언
+```
+printf("5개의 실수를 입력하시오.\n");
+```
+- 사용자에게 5개의 실수를 입력하도록 안내하는 문장 출력
+```
+for (i = 0; i < 5; i++)
+  scanf("%lf", ptr + i);
+```
+- 총 5회 반복
+- `scanf("%lf", ptr + i);`: 입력반은 실수를 `ptr+i`가 가리키는 배열 요소에 저장
+```
+for (i = 0; i < 5; i++)
+  *(ptr + i) += 2;
+```
+- 총 5회 반복
+- `*(ptr + i) += 2;`: `ptr+i`가 가리키는 배열 요소의 값에 2를 더함
+```
+printf("배열 표현: ");
+```
+- 이후에 배열 표현을 사용하여 배열의 값을 출력한다는 것을 알리는 문장 출력
+```
+for (i = 0; i < 5; i++)
+  printf("%.2f ", arr[i]);
+```
+- 총 5회 반복
+- `printf("%.2f ", arr[i]);`: 배열의 각 요소를 `arr[i]` 형태로 접근하여 소수점 둘째 자리까지 출력
+```
+printf("\n");
+```
+- 줄바꿈
+```
+printf("배열명을 이용한 포인터 표현: ");
+```
+- 배열 이름을 이요한 포인터 표현으로 값을 출력한다는 것을 알리는 문장을 출력
+```
+for (i = 0; i < 5; i++)
+  printf("%.2f ", *(arr + i));
+```
+- 총 5회 반복
+- `printf("%.2f ", *(arr + i));`: 배열의 각 요소를 `arr[i]` 형태로 접근하여 소수점 둘째 자리까지 출력
+```
+printf("\n");
+```
+- 줄바꿈
+```
+printf("포인터 변수를 이용한 배열 표현: ");
+```
+- 포인터 변수 ptr을 이용한 배열 표현으로 값을 출력한다는 것을 알리는 문장을 출력
+```
+for (i = 0; i < 5; i++)
+  printf("%.2f ", ptr[i]);
+```
+- 총 5회 반복
+- `printf("%.2f ", ptr[i]);`: 포인터 변수 ptr을 배열처럼 사용하여 i번째 요소의 값을 소수점 둘째 자리까지 출력
+```
+printf("\n");
+```
+- 줄바꿈
+```
+printf("포인터 변수를 이용한 포인터 표현: ");
+```
+- 포인터 변수 ptr을 이용한 포인터 표현으로 값을 출력한다는 것을 알리는 문장을 출력
+```
+for (i = 0; i < 5; i++)
+  printf("%.2f ", *(ptr + i));
+```
+- 총 5회 반복
+- `printf("%.2f ", *(ptr + i));`: `ptr+i`로 i번째 요소의 주소를 구하고 간접참조 연산을 이용해 해당 주소에 저장된 값을 가져와 출력
+```
+printf("\n");
+```
+- 줄바꿈
+```
+temp = ptr;
+```
+- ptr에 저장되어 있는 주소를 temp에 복사
+```
+printf("포인터 증감 연산을 이용한 표현: ");
+```
+- 포인터의 증감 연산을 이용하여 배열의 값을 출력한다는 것을 알리는 문장을 출력 
+```
+for (i = 0; i < 5; i++)
+  printf("%.2f ", *(temp++));
+```
+- 총 5회 반복
+- `printf("%.2f ", *(temp++));`: 현재 temp가 가리키는 값을 먼저 사용한 후 temp를 다음 요소로 이동시킴
+```
+printf("\n");
+```
+- 줄바꿈
+```
+return 0;
+```
+- 0을 반환하고 메인함수 종료
+
 ## 실행결과
 <img width="750" height="227" alt="13-1-5" src="https://github.com/user-attachments/assets/512d4333-8b93-482f-9d16-6d5a817c405f" />
