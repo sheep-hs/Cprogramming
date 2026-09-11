@@ -169,8 +169,80 @@ return 0;
 ---------------------------
 # 실습과제 4
 ## 작성한 코드 설명
-
+```
+#define _CRT_SECURE_NO_WARNINGS
+```
+-
+```
+#pragma warning(disable:6031)
+```
+-
+```
+#include<stdio.h>
+```
+-
+```
+int main(void)
+```
+-
+```
+double arr[5];
+```
+-
+```
+double* ptr = arr;
+```
+-
+```
+int i;
+```
+-
+```
+for (i = 0; i < 5; i++)
+```
+-
+```
+printf("5개의 실수를 입력하시오: ");
+```
+-
+```
+scanf("%lf", ptr++);
+```
+-
+```
+ptr = arr;
+```
+-
+```
+for (i = 0; i < 5; i++)
+```
+-
+```
+*ptr += 2;
+```
+-
+```
+ptr++;
+```
+-
+```
+for (i = 0; i < 5; i++)
+```
+-
+```
+printf("%.2f ", arr[i]);
+```
+-
+```
+printf("\n");
+```
+-
+```
+return 0;
+```
+-
 ## 실행결과
+<img width="402" height="197" alt="13-1-4" src="https://github.com/user-attachments/assets/d9c71bd4-47f2-4341-987e-d74f46783f3a" />
 
 --------------------------
 # 실습과제 5
