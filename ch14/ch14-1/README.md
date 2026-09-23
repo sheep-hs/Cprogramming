@@ -56,9 +56,26 @@ void add2(int* ptr)
 # 실습과제 3
 ## 작성한 코드 설명
 ```
-
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
+#include<stdio.h>
+int add2(int value);
+int main(void)
+{
+	int number;
+	printf("정수를 입력하시오: ");
+	scanf("%d", &number);
+	number = add2(number);
+	printf("2만큼 증가한 값: %d\n",number);
+}
+int add2(int value)
+{
+	value += 2;
+	return value;
+}
 ```
 ## 실행결과
+<img width="387" height="115" alt="14-1-3" src="https://github.com/user-attachments/assets/99b893d5-9f46-4d8d-a4cd-085aedaa512e" />
 
 ------------------------------
 # 실습과제 4
