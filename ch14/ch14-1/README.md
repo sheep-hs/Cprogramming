@@ -28,21 +28,44 @@ void add2(int value)
 }
 ```
 ## 실행결과
+<img width="396" height="111" alt="14-1-2" src="https://github.com/user-attachments/assets/1e86f7ec-0c28-49a4-ae70-bbbbb3e70252" />
 
 ## 설명
 
 ## 수정한 코드 설명
-
+```
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
+#include<stdio.h>
+void add2(int* ptr);
+int main(void)
+{
+	int number;
+	printf("정수를 입력하세오: ");
+	scanf("%d", &number);
+	add2(&number);
+	printf("2만큼 증가한 값: %d\n", number);
+	return 0;
+}
+void add2(int* ptr)
+{
+	*ptr += 2;
+}
+```
 --------------------------------
 # 실습과제 3
 ## 작성한 코드 설명
+```
 
+```
 ## 실행결과
 
 ------------------------------
 # 실습과제 4
 ## 수정한 코드 설명
+```
 
+```
 ## 실행결과
 
 ## 메모리의 상태
@@ -50,7 +73,9 @@ void add2(int value)
 --------------------------------
 # 실습과제 5
 ## 작성한 코드 설명
+```
 
+```
 ## 실행결과
 
 ## 2가지 방식의 차이 설명
