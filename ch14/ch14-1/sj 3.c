@@ -15,6 +15,7 @@ int main(void)
 	scanf("%d", &number);
 	number = add2(number);
 	printf("2만큼 증가한 값: %d\n",number);
+	return 0;
 }
 int add2(int value)
 {
