@@ -16,6 +16,7 @@
 
 ```
 ## 실행결과
+<img width="397" height="220" alt="14-2-2" src="https://github.com/user-attachments/assets/d0f5e04d-f8ec-4ea0-b524-c0de5039d4b7" />
 
 # 실습과제 3
 ## 작성한 코드 설명
@@ -23,6 +24,7 @@
 
 ```
 ## 실행결과
+<img width="425" height="292" alt="14-2-3" src="https://github.com/user-attachments/assets/89ccaa6b-80e6-4611-8d67-d5d08bdaa396" />
 
 # 실습과제 4
 ## 작성한 코드 설명
@@ -30,13 +32,12 @@
 
 ```
 ## 실행결과
+<img width="397" height="125" alt="14-2-4" src="https://github.com/user-attachments/assets/f0d6598e-27a4-43a3-97ae-0490870f49a8" />
 
 # 실습과제 5
-## 작성한 코드 설명
-```
+## 문제 2번
+- 매개변수 `ptr`에 `const` 선언이 되어있다. 이는 함수 ShowData 내에서 `ptr`을 통해 `ptr`이 가리키는 변수에 저장된 값을 변경시키지 않는다. `int*rptr=ptr;`에서 `const`가 선언되지 않은 포인터 변수에 `ptr`에 저장되어 있는 값을 대입하고 있다. 그래서 해당 코드가 있는 열에서 경고가 발생되는 것이다.
 
-```
-## 실행결과
 
 # 도전과제
 ## 도전 1번 실행결과
