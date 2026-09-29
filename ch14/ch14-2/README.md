@@ -41,7 +41,10 @@
 
 # 도전과제
 ## 도전 1번 실행결과
+<img width="385" height="370" alt="14-2-도전문제 1" src="https://github.com/user-attachments/assets/9b7b10cb-d1e6-4586-a841-463d687b31a3" />
 
 ## 도전 2번 실행결과
+<img width="387" height="97" alt="14-2-도전문제 2" src="https://github.com/user-attachments/assets/6b1b0ca7-7bc7-4b76-b4e8-f8ed1cd143d1" />
 
 ## 도전 4번 실행결과
+<img width="407" height="102" alt="14-2-도전문제 4" src="https://github.com/user-attachments/assets/6434d36d-0902-41d8-99de-c27e82cabd11" />
