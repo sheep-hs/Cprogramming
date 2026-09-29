@@ -11,26 +11,14 @@
 - 변수 선언 시 앞에 `const`를 붙이면 변수를 상수처럼 만들어 변수의 값을 바꿀 수 없게 한다. 해당 선언을 사용하게 되면 값이 변경되는 것을 막아주고 많이 사용하면 할수록 코드의 안전성이 높아진다.
 
 # 실습과제 2
-## 작성한 코드 설명
-```
-
-```
 ## 실행결과
 <img width="397" height="220" alt="14-2-2" src="https://github.com/user-attachments/assets/d0f5e04d-f8ec-4ea0-b524-c0de5039d4b7" />
 
 # 실습과제 3
-## 작성한 코드 설명
-```
-
-```
 ## 실행결과
 <img width="425" height="292" alt="14-2-3" src="https://github.com/user-attachments/assets/89ccaa6b-80e6-4611-8d67-d5d08bdaa396" />
 
 # 실습과제 4
-## 작성한 코드 설명
-```
-
-```
 ## 실행결과
 <img width="397" height="125" alt="14-2-4" src="https://github.com/user-attachments/assets/f0d6598e-27a4-43a3-97ae-0490870f49a8" />
 
