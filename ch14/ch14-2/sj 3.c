@@ -26,4 +26,4 @@ void get_data(int* arr, int n)
 		printf("%d번째 data를 입력하시오: ", i + 1);
 		scanf("%d", &arr[i]);
 	}
-
+}
