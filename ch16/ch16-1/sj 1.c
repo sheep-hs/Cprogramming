@@ -21,4 +21,5 @@ int main(void)
 			printf("%d ", arr3[i][j]);
 		}printf("\n");
 	}
+	return 0;
 }
