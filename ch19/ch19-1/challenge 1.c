@@ -3,8 +3,6 @@
 // 날   짜  :  2026년 10월 9일
 // 작성자   :  2600115  양효선
 // **********************************************
-#define _CRT_SECURE_NO_WARNINGS
-#pragma warning(disable:6031)
 #include<stdio.h>
 void showarr(int arr[4][4]);
 void  rotate(int arr[4][4]);
