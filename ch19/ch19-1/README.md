@@ -46,22 +46,45 @@ int add(int a, int b)
 ## 코드에 대한 설명
 ```
 #include<stdio.h>
-int add(int a, int b);
-void executer(int(*fp)(int, int));
-int main(void)
-{
-	executer(add);
-	return 0;
-}
-void executer(int(*fp)(int, int))
-{
-	printf("%d\n", fp(10, 20));
-}
-int add(int a, int b)
-{
-	return a + b;
-}
 ```
+- 헤더파일 stdio.h를 포함해라
+```
+int add(int a, int b);
+```
+- `add`함수 선언
+```
+void executer(int(*fp)(int, int));
+```
+- `executer`함수 선언
+```
+int main(void)
+```
+- 메인함수 시작
+```
+executer(add);
+```
+- `executer`함수 호출
+```
+return 0;
+```
+- 0을 반환하고 메인함수 종료
+```
+void executer(int(*fp)(int, int))
+```
+- `exwcuter`함수 정의
+```
+printf("%d\n", fp(10, 20));
+```
+- 함수 포인터를 통해 함수를 호출하고 반환된 값 출력
+```
+int add(int a, int b)
+```
+- `add`함수 정의
+```
+return a + b;
+```
+- `a+b`값을 반환
+
 ## 실행결과
 <img width="386" height="102" alt="19-1-2(1)" src="https://github.com/user-attachments/assets/201956d6-de60-42b4-9b11-f7823d7c4c01" />
 
@@ -83,74 +106,42 @@ void primenum(void* ptr)
 ## 코드에 대한 설명
 ```
 #include<stdio.h>
-void primenum(void* ptr);
-int main(void)
-{
-	int num = 10;
-	primenum(&num);
-	return 0;
-}
-void primenum(void* ptr)
-{
-	printf("%d\n", *(int*)ptr);
-}
 ```
+- 헤더파일 stdio.h를 포함해라
+```
+void primenum(void* ptr);
+```
+- `primebum`함수 선언
+```
+int main(void)
+```
+- 메인함수 시작
+```
+int num = 10;
+```
+- int형 변수 num을 선언하고 10을 저장
+```
+primenum(&num);
+```
+- `primenum`함수 호출
+```
+return 0;
+```
+- 0을 반환하고 메인함수 종료
+```
+void primenum(void* ptr)
+```
+- `primenum`함수 정의
+```
+printf("%d\n", *(int*)ptr);
+```
+- 주소에 저장된 값을 출력
+
 ## 실행결과
 <img width="392" height="97" alt="19-1-2(2)" src="https://github.com/user-attachments/assets/aa44e123-702e-4b90-8daf-4f86b6c8beca" />
 
 ------------------
 # 실습과제 3
-## 작성한 코드 설명
-```
-#define _CRT_SECURE_NO_WARNINGS
-#pragma warning(disable:6031)
-#include<stdio.h>
-int add(int a, int b);
-int sub(int a, int b);
-int mul(int a, int b);
-int div(int a, int b);
-void caculate(int(*op)(int, int));
-int main(void)
-{
-	int choice;
-	printf("연산을 선택하시오(1:덧셈, 2:뺄셈, 3:곱셈, 4:나눗셈): ");
-	scanf("%d", &choice);
-	if (choice == 1)
-		caculate(add);
-	else if (choice == 2)
-		caculate(sub);
-	else if (choice == 3)
-		caculate(mul);
-	else if (choice == 4)
-		caculate(div);
-	else
-		printf("잘못된 입력입니다.");
-	return 0;
-}
-void caculate(int(*op)(int, int))
-{
-	int a, b;
-	printf("두개의 정수를 입력하시오: ");
-	scanf("%d %d", &a, &b);
-	printf("결과값: %d", op(a, b));
-}
-int add(int a, int b)
-{
-	return a + b;
-}
-int sub(int a, int b)
-{
-	return a - b;
-}
-int mul(int a, int b)
-{
-	return a * b;
-}
-int div(int a, int b)
-{
-	return a / b;
-}
-```
 ## 실행결과
 <img width="667" height="127" alt="19-1-3" src="https://github.com/user-attachments/assets/d5ffc148-56f1-4bc4-8e5d-5669f41d1ed1" />
 
