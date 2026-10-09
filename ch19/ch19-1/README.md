@@ -63,7 +63,7 @@ int add(int a, int b)
 }
 ```
 ## 실행결과
-
+<img width="386" height="102" alt="19-1-2(1)" src="https://github.com/user-attachments/assets/201956d6-de60-42b4-9b11-f7823d7c4c01" />
 
 ## 함수의 매개변수에 void 포인터를 활용 예제
 ```
@@ -96,7 +96,7 @@ void primenum(void* ptr)
 }
 ```
 ## 실행결과
-
+<img width="392" height="97" alt="19-1-2(2)" src="https://github.com/user-attachments/assets/aa44e123-702e-4b90-8daf-4f86b6c8beca" />
 
 ------------------
 # 실습과제 3
@@ -152,14 +152,15 @@ int div(int a, int b)
 }
 ```
 ## 실행결과
-
+<img width="667" height="127" alt="19-1-3" src="https://github.com/user-attachments/assets/d5ffc148-56f1-4bc4-8e5d-5669f41d1ed1" />
 
 ----------------
 # 도전문제
 ## 도전 1번 실행결과
-
+<img width="397" height="467" alt="19-1-도전문제 1" src="https://github.com/user-attachments/assets/b7acb6b2-91ea-4a44-b2d5-34c74909c634" />
 
 ## 도전 2번 실행결과
-
+<img width="395" height="212" alt="19-1-도전문제 2" src="https://github.com/user-attachments/assets/d0b33bae-a144-4e76-9371-2b9e7ccc7bcb" />
 
 ## 도전 5번 실행결과
+<img width="397" height="187" alt="19-1-도전문제 3" src="https://github.com/user-attachments/assets/bb0046fb-d4fe-4148-96e2-d5290ce6ffbe" />
