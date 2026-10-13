@@ -121,8 +121,6 @@ printf("혈액형: %c\n", blood_type);
 return 0;
 ```
 - 0을 반환하고 메인함수 종료
-# 설명
-
 ## 실행결과
 <img width="400" height="167" alt="21-1-3" src="https://github.com/user-attachments/assets/0241c137-172e-4767-a7b6-311802a1b47d" />
 
@@ -144,7 +142,7 @@ int main(void)
 	return 0;
 }
 ```
--
+
 ## 실행결과
 <img width="401" height="207" alt="21-1-4" src="https://github.com/user-attachments/assets/0dd07f08-e926-4c13-b542-ee6c77b72e02" />
 
