@@ -88,7 +88,7 @@ void RemoveBSN(char str[]);
 ```
 int my_strlen(char str[]);
 ```
--my_strlen 함수 선언
+- my_strlen 함수 선언
 ```
 int main(void)
 ```
