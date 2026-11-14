@@ -13,6 +13,7 @@
 
 ```
 ## 실행결과
+<img width="370" height="370" alt="23-2-2" src="https://github.com/user-attachments/assets/0801889c-8a30-49c6-a5b0-d32639a80b81" />
 
 ------------
 # 실습과제 3
