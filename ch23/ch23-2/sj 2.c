@@ -23,13 +23,13 @@ int main(void)
 		printf("이름: ");
 		scanf("%s", list[i].name);
 		printf("학번: ");
-		scanf("%d", list[i].num);
+		scanf("%d", &list[i].num);
 		printf("국어: ");
-		scanf("%d", list[i].kor);
+		scanf("%d", &list[i].kor);
 		printf("영어: ");
-		scanf("%d", list[i].eng);
+		scanf("%d", &list[i].eng);
 		printf("수학: ");
-		scanf("%d", list[i].math);
+		scanf("%d", &list[i].math);
 		list[i].av = (double)(list[i].kor + list[i].eng + list[i].math) / 3;
 	}
 	for (i = 0; i < 3; i++)
