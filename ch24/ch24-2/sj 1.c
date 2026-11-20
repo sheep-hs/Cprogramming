@@ -23,7 +23,7 @@ int main(void)
 	{
 		printf("이름, 학번, 학점입력: ");
 		scanf("%s %d %lf", name, &num, &grade);
-		fprintf(fp, "%s %d %.lf\n", name, num, grade);
+		fprintf(fp, "%s %d %.1f\n", name, num, grade);
 	}
 	fclose(fp);
 	return 0;
