@@ -22,6 +22,7 @@
 
 ```
 ## 실행결과
+<img width="460" height="182" alt="23-2-3" src="https://github.com/user-attachments/assets/4c798d52-6c07-41af-80b0-6c42db28084d" />
 
 ---------------
 # 실습과제 4
@@ -30,3 +31,4 @@
 
 ```
 ## 실행결과
+<img width="397" height="172" alt="23-2-4" src="https://github.com/user-attachments/assets/11768442-e392-4560-8f98-de66664ed4f0" />
