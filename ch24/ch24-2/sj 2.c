@@ -32,7 +32,7 @@ int main(void)
 	{
 		sum = sco1 + sco2 + sco3;
 		av = (double)sum / 3;
-		fprintf(fp2, "%s %d %.1f", name, sum, av);
+		fprintf(fp2, "%s %d %.1f\n", name, sum, av);
 	}
 	fclose(fp1);
 	fclose(fp2);
