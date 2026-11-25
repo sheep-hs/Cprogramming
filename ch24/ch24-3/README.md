@@ -22,6 +22,7 @@
 
 ```
 ## 실행결과
+<img width="422" height="122" alt="24-3-3(1)" src="https://github.com/user-attachments/assets/7526af4a-7b38-4236-b244-7a19ba0de83d" />
 
 <img width="597" height="412" alt="24-3-3(2)" src="https://github.com/user-attachments/assets/881df52e-86ed-46cc-b45f-c6a54de13f02" />
 <img width="597" height="402" alt="24-3-3(3)" src="https://github.com/user-attachments/assets/28fb5115-f600-4ee6-a5b7-25ec601ff831" />
